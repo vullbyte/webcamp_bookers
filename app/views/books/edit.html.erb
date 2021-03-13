@@ -1,0 +1,49 @@
+<html>
+<body>
+  <!-- 成功メッセージの表示-->
+  <div class="index-notice">
+    <% if flash[:notice] %>
+      <p><%= flash[:notice] %></p>
+    <% end %>
+  </div>
+
+  <h1>Editing book</h1>
+
+  <%= form_with model:@book, local:true do |f| %>
+
+    <!-- 失敗メッセージ-->
+    <% if @book.errors.any? %>
+      <div>
+        <h5><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h5>
+        <ul style="color: red">
+          <% @book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="new-title">
+      <h5>Title</h5>
+      <%= f.text_field :title %>
+    </div>
+
+    <div class="new-body">
+      <h5>Body</h5>
+      <%= f.text_area :body %>
+    </div>
+
+    <div class ="new-submit">
+      <%= f.submit 'Update Book' %>
+    </div>
+
+  <% end %>
+
+  <div class="edit_button">
+    <%= link_to "Show", book_path(@book) %>
+    |
+    <%= link_to "Back", books_path %>
+  </div>
+
+</body>
+</html>

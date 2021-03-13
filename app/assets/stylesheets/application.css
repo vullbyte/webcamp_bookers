@@ -13,3 +13,95 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 35px;
+  font-size: 14px;
+  color: #000;
+  background-color: #fff;
+  font-family: Chalkduster, "Bradley Hand", Courier, arial,  "Segoe Print", sans-serif;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #000;
+}
+
+.headline {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+p {
+  margin-block-start: 30px;
+  font-size: 14px;
+  margin: 2em;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+    margin-block-start: 0.3em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h2 {
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-block-start: 0.8em;
+    margin-block-end: 0.8em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+
+table{
+  display: table;
+  border-spacing: 2px;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+}
+
+td {
+  padding-bottom:6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 1em;
+}
+
+.new-title, .new-body{
+  margin-bottom: 13px;
+
+}
+
+.show_title {
+  font-weight: bold;
+}
+
+.edit_button {
+  margin-top: 15px;
+}
